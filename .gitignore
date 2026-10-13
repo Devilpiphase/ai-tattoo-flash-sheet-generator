@@ -1,0 +1,63 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Linters / formatters
+.ruff_cache/
+.cache/
+
+# Model weights + generated flash sheets (never commit these)
+models/weights/*.safetensors
+models/weights/*.ckpt
+models/weights/*.onnx
+outputs/
+flash_sheets/
+*.png
+*.jpg
+*.jpeg
+*.webp
+!docs/example_*.png
+
+# Local config + secrets
+config/local.yaml
+config/secrets.yaml
+.env
+.env.*
+*.key
+*.pem
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
