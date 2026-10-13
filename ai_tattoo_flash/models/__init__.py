@@ -1,0 +1,1 @@
+"""Data models. Plain dataclasses — no behavior, no IO."""
