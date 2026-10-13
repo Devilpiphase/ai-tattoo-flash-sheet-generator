@@ -1,0 +1,1 @@
+"""Adapters. The only layer allowed to touch the outside world."""
