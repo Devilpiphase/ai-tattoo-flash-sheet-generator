@@ -1,0 +1,21 @@
+# Core
+pyyaml>=6.0.1
+pydantic>=2.7.0
+pillow>=10.3.0
+numpy>=1.26.0
+rich>=13.7.0
+typer>=0.12.0
+
+# GUI (Windows desktop shell)
+PySide6>=6.7.0
+
+# Rendering backends (optional at runtime, imported lazily)
+torch>=2.3.0 ; platform_system == "Windows"
+diffusers>=0.29.0 ; platform_system == "Windows"
+safetensors>=0.4.3
+
+# Dev
+pytest>=8.2.0
+pytest-qt>=4.4.0
+ruff>=0.5.0
+mypy>=1.10.0
