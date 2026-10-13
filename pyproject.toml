@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-tattoo-flash-sheet-generator"
+version = "0.4.2"
+description = "AI tattoo flash sheet generator — prompt, style, and layout driven flash sheet composition for tattoo artists."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "ai-tattoo-flash-sheet contributors" }]
+keywords = ["tattoo", "flash-sheet", "generative-art", "diffusion", "stencil"]
+dependencies = [
+  "pyyaml>=6.0.1",
+  "pydantic>=2.7.0",
+  "pillow>=10.3.0",
+  "numpy>=1.26.0",
+  "rich>=13.7.0",
+  "typer>=0.12.0",
+  "safetensors>=0.4.3",
+]
+
+[project.optional-dependencies]
+gui = ["PySide6>=6.7.0"]
+render = ["torch>=2.3.0", "diffusers>=0.29.0"]
+dev = ["pytest>=8.2.0", "pytest-qt>=4.4.0", "ruff>=0.5.0", "mypy>=1.10.0"]
+
+[project.scripts]
+tattoo-flash = "ai_tattoo_flash.bootstrap.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ai_tattoo_flash*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
