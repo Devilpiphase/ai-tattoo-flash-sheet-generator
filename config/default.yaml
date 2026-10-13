@@ -1,0 +1,33 @@
+app:
+  name: ai-tattoo-flash-sheet-generator
+  version: 0.4.2
+  output_root: outputs
+  log_level: INFO
+
+render:
+  backend: diffusers          # diffusers | stub
+  model_id: tattooflash-xl-v2
+  weights_dir: models/weights
+  device: cuda                # cuda | cpu
+  steps: 28
+  guidance: 6.5
+  seed: null
+
+sheet:
+  page: A3
+  dpi: 300
+  columns: 4
+  rows: 3
+  gutter_mm: 6
+  margin_mm: 18
+  background: "#f4efe6"
+  ink: "#111111"
+  label_style: handscript
+
+styles:
+  preset_file: presets.yaml
+
+bridge:
+  enabled: false
+  host: 127.0.0.1
+  port: 8765
