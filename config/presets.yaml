@@ -1,0 +1,41 @@
+# Style presets drive the prompt builder. Keep keys stable — they're persisted in
+# saved sheets and referenced by the CLI `--style` flag.
+irezumi:
+  label: "Japanese Irezumi"
+  palette: [black, indigo, vermilion]
+  linework: heavy
+  shading: blackwork-with-whip
+  motifs: [koi, dragon, hannya, wave, peony]
+  negative: "color, photorealistic, 3d render"
+
+neo_traditional:
+  label: "Neo-Traditional"
+  palette: [black, ochre, teal, crimson]
+  linework: bold
+  shading: gradient
+  motifs: [rose, dagger, swallow, skull, anchor]
+  negative: "flat, sketch, unfinished"
+
+dotwork:
+  label: "Dotwork / Stipple"
+  palette: [black, grey]
+  linework: fine
+  shading: stipple
+  motifs: [mandala, wolf, moon, geometric, eye]
+  negative: "smooth gradient, color"
+
+blackwork:
+  label: "Blackwork"
+  palette: [black]
+  linework: heavy
+  shading: solid-fill
+  motifs: [ornament, band, geometric, serpent]
+  negative: "color, soft shading, sketch"
+
+fine_line:
+  label: "Fine Line"
+  palette: [black]
+  linework: hairline
+  shading: minimal
+  motifs: [botanical, script, constellation, single-needle]
+  negative: "bold, heavy fill, color"
